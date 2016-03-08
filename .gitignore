@@ -1,0 +1,9 @@
+*~
+.#*
+[#]*[#]
+
+*.deb
+*.fe1
+*.fe2
+secrets.json
+.vagrant
