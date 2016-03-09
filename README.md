@@ -1,12 +1,13 @@
-## Testing with Chef Server Front-Ends
+## About this project
 
-This repo will allow you to stand up a chef-backend cluster with a single chef-server front-end node.
+This repo will stand up a chef-backend cluster with a single chef-server front-end node.
 
 ### Prerequisites
 
 * 8GB of free RAM
-* chef-server-core and chef-backend .deb packages should be stored in the same directory as this README.
+* The latest chef-server-core and chef-backend .deb packages should be stored in the same directory as this README.
 * Vagrant
+* Virtualbox
 
 ### Quick Start [Automated]
 
@@ -20,6 +21,8 @@ node.
 * be1, 192.168.33.215
 * be2, 192.168.33.216
 * be3, 192.168.33.217
+
+* Backend-VIP: 192.168.33.220 - This is an IP that will be automatically assigned to the primary node in the backend cluster.
 
 * fe1, 192.168.33.218
 
