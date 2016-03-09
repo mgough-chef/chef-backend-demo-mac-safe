@@ -32,7 +32,10 @@ Vagrant.configure(2) do |config|
   config.vm.define :fe1 do |fe1|
     fe1.vm.hostname = 'fe1.chef-demo.com'
     fe1.vm.network :private_network, ip: '192.168.33.218'
-    fe1.vm.provision "shell", :inline => \
-      'dpkg -s chef-server-core || dpkg -i /vagrant/chef-server-core*'
+    fe1.vm.provision :shell, path: "scripts/provision_fe1.sh"
+    fe1.vm.provider "virtualbox" do |vb|
+      vb.memory = '2048'
+      vb.cpus = 2
+    end
   end
 end
