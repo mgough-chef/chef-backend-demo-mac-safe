@@ -26,7 +26,7 @@ Vagrant.configure(2) do |config|
   config.vm.define :be3 do |be3|
     be3.vm.hostname = 'be3'
     be3.vm.network :private_network, ip: '192.168.33.217'
-    be3.vm.provision :shell, path: "scripts/provision_be2.sh"
+    be3.vm.provision :shell, path: "scripts/provision_be3.sh"
   end
 
   config.vm.define :fe1 do |fe1|
