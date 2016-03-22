@@ -8,7 +8,6 @@ mkdir -p /etc/chef-backend
 
 # Create cluster configuration file
 cat > /etc/chef-backend/chef-backend.rb <<EOF
-peers ['192.168.33.216','192.168.33.217']
 publish_address '192.168.33.215'
 vip "192.168.33.220"
 vip_interface "eth1"
