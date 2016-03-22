@@ -2,6 +2,8 @@
 
 This repo will stand up a chef-backend cluster with a single chef-server front-end node.
 
+*This demo repo requires chef-backend 0.3 or later*
+
 The shell scripts in the `/scripts` directory are intended as documentation for building / configuring Chef Server clusters using the chef-backend package.
 
 *NOTE*: The APIs, CLI commands, and config file format are not stable, and are likely to change between nightly releases.
