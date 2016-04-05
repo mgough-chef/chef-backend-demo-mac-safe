@@ -12,8 +12,8 @@ The shell scripts in the `/scripts` directory are intended as documentation for 
 
 * 8GB of free RAM
 * The latest chef-server-core and chef-backend .deb packages should be stored in the same directory as this README.
-** http://packagecloud.io/chef/current for the nightly chef-backend packages
-** https://downloads.chef.io/chef-server/ubuntu/ for the latest stable chef-server-core package
+* * https://packages.chef.io/current/ubuntu/ for the nightly chef-backend packages
+* * https://downloads.chef.io/chef-server/ubuntu/ for the latest stable chef-server-core package
 * Vagrant
 * Virtualbox
 
