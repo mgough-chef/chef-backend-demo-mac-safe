@@ -9,8 +9,6 @@ mkdir -p /etc/chef-backend
 # Create cluster configuration file
 cat > /etc/chef-backend/chef-backend.rb <<EOF
 publish_address '192.168.33.215'
-vip "192.168.33.220"
-vip_interface "eth1"
 EOF
 
 # Initialize the cluster
