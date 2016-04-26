@@ -7,3 +7,5 @@
 *.fe2
 secrets.json
 .vagrant
+.bak
+
