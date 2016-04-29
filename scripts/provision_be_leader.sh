@@ -1,15 +1,13 @@
 #!/bin/bash
 
-# Install the cluster package
-dpkg -s chef-backend || dpkg -i /vagrant/chef-backend*
+# Get IP address of eth1 because this is a Vagrant box
+ipaddr=$(ifconfig eth1 | awk '/inet addr/{print substr($2,6)}')
 
-# Create cluster configuration directory
-mkdir -p /etc/chef-backend
+# Install the cluster package
+dpkg -s chef-backend &> /dev/null || dpkg -i /vagrant/chef-backend*
 
 # Create cluster configuration file
-cat > /etc/chef-backend/chef-backend.rb <<EOF
-publish_address '192.168.33.215'
-EOF
+echo "publish_address '$ipaddr'" >> /etc/chef-backend/chef-backend.rb
 
 # Initialize the cluster
 chef-backend-ctl bootstrap

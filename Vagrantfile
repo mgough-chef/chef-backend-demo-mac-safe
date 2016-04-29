@@ -9,24 +9,22 @@ Vagrant.configure(2) do |config|
     vb.cpus = 2
   end
 
-  config.vm.provision :shell, path: "scripts/provision_hostsfile.sh"
-
   config.vm.define :be1 do |be1|
     be1.vm.hostname = 'be1'
     be1.vm.network :private_network, ip: '192.168.33.215'
-    be1.vm.provision :shell, path: "scripts/provision_be1.sh"
+    be1.vm.provision :shell, path: "scripts/provision_be_leader.sh"
   end
 
   config.vm.define :be2 do |be2|
     be2.vm.hostname = 'be2'
     be2.vm.network :private_network, ip: '192.168.33.216'
-    be2.vm.provision :shell, path: "scripts/provision_be2.sh"
+    be2.vm.provision :shell, path: "scripts/provision_be_follower.sh"
   end
 
   config.vm.define :be3 do |be3|
     be3.vm.hostname = 'be3'
     be3.vm.network :private_network, ip: '192.168.33.217'
-    be3.vm.provision :shell, path: "scripts/provision_be3.sh"
+    be3.vm.provision :shell, path: "scripts/provision_be_follower.sh"
   end
 
   config.vm.define :fe1 do |fe1|

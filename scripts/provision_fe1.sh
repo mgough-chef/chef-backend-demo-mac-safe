@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install the Chef Server package
-dpkg -s chef-server-core || dpkg -i /vagrant/chef-server-core*
+dpkg -s chef-server-core &> /dev/null || dpkg -i /vagrant/chef-server-core*
 
 # Create chef server configuration directory
 mkdir -p /etc/opscode
