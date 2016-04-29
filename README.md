@@ -2,7 +2,7 @@
 
 This repo will stand up a chef-backend cluster with a single chef-server front-end node.
 
-*Note:* This demo repo requires chef-backend 0.5 or later.
+*Note:* This demo repo requires chef-backend 0.6 or later.
 
 *Note:* This demo repo requires a chef-server-core package built on or after April 22nd, 2016.
 
