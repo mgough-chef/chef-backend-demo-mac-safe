@@ -2,8 +2,9 @@
 
 This repo will stand up a chef-backend cluster with a single chef-server front-end node.
 
-**Note:** This demo repo requires chef-backend 0.5 or later
-**Note:** This demo repo requires a chef-server-core package built on or after April 22nd, 2016.
+*Note:* This demo repo requires chef-backend 0.5 or later.
+
+*Note:* This demo repo requires a chef-server-core package built on or after April 22nd, 2016.
 
 The shell scripts in the `/scripts` directory are intended as documentation for building / configuring Chef Server clusters using the chef-backend package.
 
@@ -30,7 +31,6 @@ node.
 * be1, 192.168.33.215
 * be2, 192.168.33.216
 * be3, 192.168.33.217
-
 * fe1, 192.168.33.218
 
 ### Administering the chef-backend cluster
