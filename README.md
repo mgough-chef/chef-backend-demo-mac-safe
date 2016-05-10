@@ -2,7 +2,7 @@
 
 This repo will stand up a chef-backend cluster with a single chef-server front-end node.
 
-*Note:* This demo repo requires chef-backend 0.6 or later.
+*Note:* This demo repo requires chef-backend 0.7 or later.
 
 *Note:* This demo repo requires a chef-server-core package built on or after April 22nd, 2016.
 
@@ -14,8 +14,8 @@ The shell scripts in the `/scripts` directory are intended as documentation for 
 
 * 8GB of free RAM
 * The latest chef-server-core and chef-backend .deb packages should be stored in the same directory as this README.
-- https://bintray.com/chef/current-apt/backend/view for the nightly chef-backend packages
-- https://bintray.com/chef/current-apt/chef-server/view for the nightly chef-server-core package
+- https://bintray.com/chef/current-apt/chef-backend/view for the nightly chef-backend packages
+- https://downloads.chef.io/chef-server/ for the latest release of the chef-server-core package
 * Vagrant
 * Virtualbox
 

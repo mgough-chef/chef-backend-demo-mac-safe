@@ -10,7 +10,7 @@ dpkg -s chef-backend &> /dev/null || dpkg -i /vagrant/chef-backend*
 echo "publish_address '$ipaddr'" >> /etc/chef-backend/chef-backend.rb
 
 # Initialize the cluster
-chef-backend-ctl bootstrap --accept-license
+chef-backend-ctl bootstrap --accept-license --yes
 
 # Copy the secret key file to a shared location
 [[ -f /vagrant/secrets.json ]] && rm /vagrant/secrets.json
