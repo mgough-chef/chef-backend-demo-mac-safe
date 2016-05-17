@@ -19,4 +19,4 @@ cp /etc/chef-backend/secrets.json /vagrant/secrets.json
 # Generate a chef server frontend config
 # and copy it to a shared location
 [[ -f /vagrant/chef-server.rb.fe1 ]] && rm /vagrant/chef-server.rb.fe1
-chef-backend-ctl gen-server-config fe1.chef-demo.com > /vagrant/chef-server.rb.fe1
+chef-backend-ctl gen-server-config fe1.chef-demo.com -f /vagrant/chef-server.rb.fe1
