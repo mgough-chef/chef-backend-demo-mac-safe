@@ -4,17 +4,17 @@
 ipaddr=$(ifconfig eth1 | awk '/inet addr/{print substr($2,6)}')
 
 # Install the cluster package
-dpkg -s chef-backend &> /dev/null || dpkg -i /vagrant/chef-backend*
+dpkg -s chef-backend &> /dev/null || dpkg -i /vagrant/chef-backend*.deb
 
 # Create cluster configuration file
 echo "publish_address '$ipaddr'" >> /etc/chef-backend/chef-backend.rb
 
 # Initialize the cluster
-chef-backend-ctl bootstrap --accept-license --yes
+chef-backend-ctl create-cluster --accept-license --yes
 
 # Copy the secret key file to a shared location
-[[ -f /vagrant/secrets.json ]] && rm /vagrant/secrets.json
-cp /etc/chef-backend/secrets.json /vagrant/secrets.json
+[[ -f /vagrant/chef-backend-secrets.json ]] && rm /vagrant/chef-backend-secrets.json
+cp /etc/chef-backend/chef-backend-secrets.json /vagrant/chef-backend-secrets.json
 
 # Generate a chef server frontend config
 # and copy it to a shared location

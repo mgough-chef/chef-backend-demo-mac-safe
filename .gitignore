@@ -5,7 +5,7 @@
 *.deb
 *.fe1
 *.fe2
-secrets.json
+chef-backend-secrets.json
 .vagrant
 .bak
 
