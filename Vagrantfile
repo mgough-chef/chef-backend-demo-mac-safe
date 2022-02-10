@@ -2,10 +2,10 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = 'ubuntu/trusty64'
+  config.vm.box = 'bento/ubuntu-16.04'
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = '1024'
+    vb.memory = '1500'
     vb.cpus = 2
   end
 
@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
     fe1.vm.network :private_network, ip: '192.168.33.218'
     fe1.vm.provision :shell, path: "scripts/provision_fe1.sh"
     fe1.vm.provider "virtualbox" do |vb|
-      vb.memory = '2048'
+      vb.memory = '1500'
       vb.cpus = 2
     end
   end
