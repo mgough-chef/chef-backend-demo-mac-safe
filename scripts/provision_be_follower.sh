@@ -8,4 +8,4 @@ ipaddr=$(ifconfig enp0s8 | awk '/inet addr/{print substr($2,6)}')
 dpkg -s chef-backend &> /dev/null || dpkg -i /vagrant/chef-backend_2.0.30*.deb
 
 # Join the cluster
-chef-backend-ctl join-cluster 192.168.33.215 -p $ipaddr -s /vagrant/chef-backend-secrets.json --accept-license --yes
+chef-backend-ctl join-cluster 192.168.56.215 -p $ipaddr -s /vagrant/chef-backend-secrets.json --accept-license --yes
