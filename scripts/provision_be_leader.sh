@@ -5,7 +5,7 @@
 ipaddr=$(ifconfig enp0s8 | awk '/inet addr/{print substr($2,6)}')
 
 # Install the cluster package
-dpkg -s chef-backend &> /dev/null || dpkg -i /vagrant/chef-backend_2.0.30*.deb
+dpkg -s chef-backend &> /dev/null || dpkg -i /vagrant/chef-backend_*.deb
 
 # Create cluster configuration file
 echo "publish_address '$ipaddr'" >> /etc/chef-backend/chef-backend.rb
