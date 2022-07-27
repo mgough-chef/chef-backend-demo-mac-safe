@@ -12,4 +12,4 @@ cp /vagrant/chef-server.rb.fe1 /etc/opscode/chef-server.rb
 
 # Attach the chef server to the existing backend-cluster
 [[ -f /etc/opscode/private-chef-secrets.json ]] || \
-chef-server-ctl reconfigure
+chef-server-ctl reconfigure --chef-license=accept

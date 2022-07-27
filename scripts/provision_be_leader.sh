@@ -11,8 +11,8 @@ dpkg -s chef-backend &> /dev/null || dpkg -i /vagrant/chef-backend_*.deb
 echo "publish_address '$ipaddr'" >> /etc/chef-backend/chef-backend.rb
 
 #Modify embedded cookbooks to change ElasticSearch jvm.options
-esjvmopts = "/opt/chef-backend/embedded/cookbooks/chef-backend/templates/default/es_jvm.opts.erb"
-cat >> $esjvmopts <<EOF 
+esjvmopts="/opt/chef-backend/embedded/cookbooks/chef-backend/templates/default/es_jvm.opts.erb"
+cat >> $esjvmopts <<EOF
 -XX:+UnlockExperimentalVMOptions
 -XX:+UseZGC
 EOF
