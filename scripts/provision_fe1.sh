@@ -11,7 +11,7 @@ mkdir -p /etc/opscode
 cp /vagrant/chef-server.rb.fe1 /etc/opscode/chef-server.rb
 
 #Ensure all backend IPs are included in config. As server config is generated before followers are joined, we need to ensure all IPs are listed.
-sed 's/"192.168.56.215"/"192.168.56.215", "192.168.56.217", "192.168.56.216"/g' /etc/opscode/chef-server.rb
+sed -i 's/"192.168.56.215"/"192.168.56.215", "192.168.56.217", "192.168.56.216"/g' /etc/opscode/chef-server.rb
 
 # Attach the chef server to the existing backend-cluster
 [[ -f /etc/opscode/private-chef-secrets.json ]] || \
