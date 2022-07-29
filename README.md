@@ -26,12 +26,12 @@ vagrant up
 ### Cluster Topology
 
 This will result in a 3-node chef-backend cluster, and a single front-end
-node.
+node. They are provisioned in the order listed below.
 
-* be1, 192.168.33.215
-* be2, 192.168.33.216
-* be3, 192.168.33.217
-* fe1, 192.168.33.218
+* be1, 192.168.56.215
+* be2, 192.168.56.216
+* be3, 192.168.56.217
+* fe1, 192.168.56.218
 
 ### Administering the chef-backend cluster
 The chef-backend cluster is administered with the `chef-backend-ctl` command. See the built-in help for details.
