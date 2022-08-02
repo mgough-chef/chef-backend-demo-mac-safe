@@ -12,11 +12,8 @@ echo "publish_address '$ipaddr'" >> /etc/chef-backend/chef-backend.rb
 
 #Modify embedded cookbooks to change ElasticSearch jvm.options
 esjvmopts="/opt/chef-backend/embedded/cookbooks/chef-backend/templates/default/es_jvm.opts.erb"
-cat >> $esjvmopts <<EOF
--XX:+UnlockExperimentalVMOptions
--XX:+UseZGC
-EOF
-sed -i '/ConcMark/d;/CMS/d' $esjvmopts
+sed -i '/-XX:-UseConcMarkSweepGC/d' $esjvmopts
+ed '/-XX:-UseCMSInitiatingOccupancyOnly/d' $esjvmopts
 
 # Initialize the cluster
 chef-backend-ctl create-cluster --accept-license --yes
